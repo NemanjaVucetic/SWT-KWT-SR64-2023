@@ -1,0 +1,30 @@
+package rs.ac.uns.ftn.svtvezbe06.model.entity;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import rs.ac.uns.ftn.svtvezbe06.model.enums.DayOfWeek;
+
+@Entity
+@Table(name = "work_day")
+public class WorkDay {
+	
+	@Column(nullable = false)
+	LocalDate validForm;
+	
+	@Column(nullable = false)
+	DayOfWeek day;
+	
+	@Column(nullable = false)
+	LocalTime from;
+	
+	@Column(nullable = false)
+	LocalTime Until;
+
+}

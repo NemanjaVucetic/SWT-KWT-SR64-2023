@@ -1,0 +1,43 @@
+package rs.ac.uns.ftn.svtvezbe06.model.entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "facility")
+
+public class Facility {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+	
+	@Column(nullable = false, unique = true)
+	String name;
+	
+	@Column
+	String description;
+	
+	@Column
+	LocalDate createdAt;
+	
+	@Column(nullable = false)
+	String adress;
+	
+	@Column(nullable = false)
+	String city;
+	
+	@Column
+	double totalRating;
+	
+	boolean active;
+
+}
